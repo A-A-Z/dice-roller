@@ -7,10 +7,10 @@
       <input type="number" min="1" max="6" v-model="number" @change="buildDice">
       <button v-on:click="roll">Roll</button>
     </section>
-    <section>
-      <ul>
+    <section class="dice-results">
+      <ul class="results-list">
         <li v-for="die in dice">
-          {{ die }}
+          <Die :result="die" />
         </li>
       </ul>
     </section>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import Die from './components/Die'
 
 let data = {
   number: 3,
@@ -31,6 +32,7 @@ let data = {
 
 export default {
   name: 'app',
+  components: { Die },
   data: () => {
     return data
   },

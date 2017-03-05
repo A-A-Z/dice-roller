@@ -1,3 +1,7 @@
-body {
-  background-color: #EEE;
-}
+$colour-dice-fill: #F4EFEF;
+$colour-dice-stroke: #000000;
+
+$die-size: 80px;
+
+@import 'die';
+@import 'page';

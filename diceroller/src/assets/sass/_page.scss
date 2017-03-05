@@ -1,0 +1,22 @@
+
+main {
+  text-align: center;
+}
+
+.dice-results {
+  padding: 40px;
+
+  .results-list {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      display: block;
+      float: left;
+      margin: 5px;
+    }
+  }
+}

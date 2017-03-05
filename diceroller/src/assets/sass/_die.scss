@@ -1,0 +1,51 @@
+.die {
+  height: $die-size;
+  width: $die-size;
+
+  .st0 {
+    fill: $colour-dice-fill;
+    stroke: $colour-dice-stroke;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+  }
+
+  .dot {
+    display: none;
+  }
+
+  &.result {
+    &-1 {
+      #three { display: block; }
+    }
+    &-2 {
+      #one,
+      #seven { display: block; }
+    }
+    &-3 {
+      #one,
+      #three,
+      #seven { display: block; }
+    }
+    &-4 {
+      #one,
+      #four,
+      #five,
+      #seven { display: block; }
+    }
+    &-5 {
+      #one,
+      #three,
+      #four,
+      #five,
+      #seven { display: block; }
+    }
+    &-6 {
+      #one,
+      #two,
+      #four,
+      #five,
+      #six,
+      #seven { display: block; }
+    }
+  }
+}
