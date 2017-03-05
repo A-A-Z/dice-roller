@@ -1,10 +1,22 @@
 
 main {
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
   text-align: center;
 }
 
+h1 {
+  font-family: 'Diplomata SC', cursive;
+  font-size: 46px;
+}
+
+.dice-form {
+  padding: 20px 0;
+}
+
 .dice-results {
-  padding: 40px;
+  height: 200px;
+  padding-top: 20px;
 
   .results-list {
     display: inline-block;

@@ -1,5 +1,5 @@
 <template>
-  <div id="die" v-bind:class="setClass(result)">
+  <div id="die" v-bind:class="setClass(result, rolling)">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
       <g id="base">
       	<path id="base_1_" class="st0" d="M263.8,293H37c-15.4,0-28-12.6-28-28V38.3c0-15.4,12.6-28,28-28h226.8c15.4,0,28,12.6,28,28V265
@@ -21,10 +21,14 @@
 <script>
 export default {
   name: 'die',
-  props: ['result'],
+  props: ['result', 'rolling'],
   methods: {
-    setClass: (resultLabel) => {
-      return ['die', 'result-' + resultLabel]
+    setClass: (resultLabel, isRolling) => {
+      let classes = ['die', 'result-' + resultLabel]
+      if (isRolling) {
+        classes.push('rolling')
+      }
+      return classes
     }
   }
 }
