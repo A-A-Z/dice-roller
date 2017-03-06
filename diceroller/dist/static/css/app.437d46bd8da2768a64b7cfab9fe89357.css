@@ -1,0 +1,114 @@
+
+.die {
+  transition: padding 0.5s ease;
+  height: 80px;
+  padding: 30px 0 0 0;
+  position: relative;
+  width: 80px;
+}
+.die .st0 {
+    fill: #F4EFEF;
+    stroke: #000000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+.die .dot {
+    display: none;
+}
+.die.rolling {
+    padding: 0 0 30px 0;
+}
+.die.rolling svg {
+      animation: wobble 0.5s infinite;
+}
+@keyframes wobble {
+0% {
+    transform: rotate(0deg);
+}
+20% {
+    transform: rotate(10deg);
+}
+50% {
+    transform: rotate(-10deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+.die.result-1 #three {
+    display: block;
+}
+.die.result-2 #one,
+  .die.result-2 #seven {
+    display: block;
+}
+.die.result-3 #one,
+  .die.result-3 #three,
+  .die.result-3 #seven {
+    display: block;
+}
+.die.result-4 #one,
+  .die.result-4 #four,
+  .die.result-4 #five,
+  .die.result-4 #seven {
+    display: block;
+}
+.die.result-5 #one,
+  .die.result-5 #three,
+  .die.result-5 #four,
+  .die.result-5 #five,
+  .die.result-5 #seven {
+    display: block;
+}
+.die.result-6 #one,
+  .die.result-6 #two,
+  .die.result-6 #four,
+  .die.result-6 #five,
+  .die.result-6 #six,
+  .die.result-6 #seven {
+    display: block;
+}
+.die:after {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    content: ' ';
+    display: block;
+    height: 2px;
+    left: 5px;
+    position: absolute;
+    right: 5px;
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+main {
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+h1 {
+  font-family: 'Diplomata SC', cursive;
+  font-size: 46px;
+}
+.dice-form {
+  padding: 20px 0;
+}
+.dice-results {
+  height: 200px;
+  padding-top: 20px;
+}
+.dice-results .results-list {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.dice-results .results-list li {
+      display: block;
+      float: left;
+      margin: 5px;
+}
+
+/*# sourceMappingURL=app.437d46bd8da2768a64b7cfab9fe89357.css.map*/
