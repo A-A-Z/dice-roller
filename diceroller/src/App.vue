@@ -5,8 +5,12 @@
       <hr>
     </header>
     <section class="dice-form">
-      <input type="number" :min="minNumber" :max="maxNumber" v-model="number" @change="buildDice">
-      <button v-on:click="roll">Roll</button>
+      <div>
+        <input type="number" :min="minNumber" :max="maxNumber" v-model="number" @change="buildDice" aria-label="Number of Dice">
+      </div>
+      <div>
+        <button v-on:click="roll">Roll</button>
+      </div>
     </section>
     <section class="dice-results">
       <ul class="results-list">
