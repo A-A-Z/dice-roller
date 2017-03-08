@@ -24,11 +24,7 @@ export default {
   props: ['result', 'rolling'],
   methods: {
     setClass: (resultLabel, isRolling) => {
-      let classes = ['die', 'result-' + resultLabel]
-      if (isRolling) {
-        classes.push('rolling')
-      }
-      return classes
+      return ['die', 'result-' + resultLabel, ((isRolling) ? 'rolling' : 'stop-rolling')]
     }
   }
 }

@@ -71,6 +71,8 @@ export default {
         if (rollsToGo[index] === 0) {
           rolling[index] = false
           clearInterval(timers[index])
+        } else if (rollsToGo[index] < 2) {
+          rolling[index] = false
         } else {
           rolling[index] = true
         }
@@ -80,7 +82,7 @@ export default {
 
       if (data.rolling.reduce((a, b) => a + b, 0) === 0) {
         for (let i = 0; i < data.number; i++) {
-          rollsToGo[i] = Math.floor((Math.random() * 10) + 3)
+          rollsToGo[i] = Math.floor((Math.random() * 10) + 7)
           timers[i] = setInterval(() => { keepRolling(i) }, 70)
         }
       }
