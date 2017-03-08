@@ -5,7 +5,7 @@
       <hr>
     </header>
     <section class="dice-form">
-      <input type="number" min="1" max="6" v-model="number" @change="buildDice">
+      <input type="number" :min="minNumber" :max="maxNumber" v-model="number" @change="buildDice">
       <button v-on:click="roll">Roll</button>
     </section>
     <section class="dice-results">
@@ -26,6 +26,8 @@ import Die from './components/Die'
 
 let data = {
   number: 3,
+  minNumber: 1,
+  maxNumber: 6,
   dice: [],
   rolling: [],
   sumTxt: '',
@@ -44,6 +46,11 @@ export default {
     buildDice: () => {
       let dice = []
       let rolling = []
+
+      // stop any shenanigans from the input
+      if (!data.number || data.number < data.minNumber || data.number > data.maxNumber) {
+        data.number = 1
+      }
 
       for (let i = 0; i < data.number; i++) {
         dice.push(1)
